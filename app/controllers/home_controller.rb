@@ -2,6 +2,6 @@ require 'socket'
 
 class HomeController < ApplicationController
   def index
-    @hostname = Socket.hostname
+    @hostname = Socket.gethostname
   end
 end

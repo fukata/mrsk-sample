@@ -12,5 +12,7 @@ ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install -j3 --quiet
 ADD . /app
 
+EXPOSE $PORT
+
 CMD ./bin/rails server -p $PORT -b '0.0.0.0'
 #ENTRYPOINT ["./bin", "rails", "server", "-p", $PORT, "-b", "0.0.0.0"] 
